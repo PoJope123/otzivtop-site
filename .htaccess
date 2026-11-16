@@ -6,11 +6,11 @@ RewriteEngine On
 # отзывтоп.рф и www → otzivtop.ru
 RewriteCond %{HTTP_HOST} ^(www\.)?xn--b1ajucfoc4e\.xn--p1ai$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www\.otzivtop\.ru$ [NC]
-RewriteRule ^(.*)$ http://otzivtop.ru/$1 [R=301,L]
+RewriteRule ^(.*)$ https://otzivtop.ru/$1 [R=301,L]
 
-# Включить после установки SSL (убрать # в двух строках ниже):
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://otzivtop.ru/$1 [R=301,L]
+# Всегда https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://otzivtop.ru/$1 [R=301,L]
 
 # Закрыть служебные папки
 RewriteRule ^zayavki/ - [F,L]
