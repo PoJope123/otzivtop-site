@@ -8,9 +8,7 @@ RewriteCond %{HTTP_HOST} ^(www\.)?xn--b1ajucfoc4e\.xn--p1ai$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www\.otzivtop\.ru$ [NC]
 RewriteRule ^(.*)$ https://otzivtop.ru/$1 [R=301,L]
 
-# Всегда https
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://otzivtop.ru/$1 [R=301,L]
+# https включён в настройках домена на Джино («Всегда использовать только HTTPS»)
 
 # Закрыть служебные папки
 RewriteRule ^zayavki/ - [F,L]
