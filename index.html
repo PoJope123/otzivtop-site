@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ОтзывТоп — вы видите рейтинг, мы показываем, из чего он складывается</title>
+<meta name="description" content="Собираем отзывы со всех площадок, где есть ваше заведение, считаем, на что жалуются чаще всего, и даём план из пяти шагов. Отчёт за два рабочих дня, от 415 ₽.">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a href="./" class="logo" aria-label="ОтзывТоп, на главную"><img src="img/logo.svg" alt="ОтзывТоп" width="150" height="40"></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#nahodki">Что мы находим</a>
+      <a href="#primer">Пример отчёта</a>
+      <a href="#ceny">Цены</a>
+      <a href="#voprosy">Вопросы</a>
+    </nav>
+    <a href="#zakaz" class="btn btn--sm">Заказать разбор</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <h1>Вы видите рейтинг. Мы показываем, из чего он складывается</h1>
+      <p class="lead">Разбираем отзывы о вашем заведении и говорим, что мешает гостям ставить пять звёзд.</p>
+      <div class="hero__btns">
+        <a href="#zakaz" class="btn">Заказать разбор</a>
+        <a href="primer-razbora.pdf" class="link-strong" target="_blank" rel="noopener">Открыть пример отчёта</a>
+      </div>
+      <dl class="facts">
+        <div><dt>от 415 ₽</dt><dd>за один разбор</dd></div>
+        <div><dt>2 дня</dt><dd>на подготовку отчёта</dd></div>
+        <div><dt>5 шагов</dt><dd>конкретный план, с чего начать</dd></div>
+      </dl>
+    </div>
+
+    <figure class="review" aria-label="Пример отзыва с разметкой по темам">
+      <div class="review__meta">
+        <span class="review__ava" aria-hidden="true">ЕК</span>
+        <div>
+          <b>Елена К.</b>
+          <span class="review__stars" aria-label="2 из 5">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.95 6.02 6.63.9-4.82 4.6 1.2 6.58L12 17.35l-5.96 3.15 1.2-6.58L2.42 9.32l6.63-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.95 6.02 6.63.9-4.82 4.6 1.2 6.58L12 17.35l-5.96 3.15 1.2-6.58L2.42 9.32l6.63-.9z"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.95 6.02 6.63.9-4.82 4.6 1.2 6.58L12 17.35l-5.96 3.15 1.2-6.58L2.42 9.32l6.63-.9z"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.95 6.02 6.63.9-4.82 4.6 1.2 6.58L12 17.35l-5.96 3.15 1.2-6.58L2.42 9.32l6.63-.9z"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.95 6.02 6.63.9-4.82 4.6 1.2 6.58L12 17.35l-5.96 3.15 1.2-6.58L2.42 9.32l6.63-.9z"/></svg>
+          </span>
+        </div>
+        <span class="review__src">2ГИС, июль</span>
+      </div>
+      <blockquote class="review__text">
+        Кухня хорошая, сырники лучшие в районе. Но <mark data-t="1">горячее ждали пятьдесят минут</mark>, хотя зал был наполовину пустой. <mark data-t="2">Официант перепутал заказ и даже не извинился</mark>. И <mark data-t="3">за такой сервис цены уже слишком высокие</mark>.
+      </blockquote>
+      <ul class="review__tags">
+        <li data-t="1"><b>Ожидание</b><span>17 отзывов за год</span></li>
+        <li data-t="2"><b>Персонал</b><span>12 отзывов</span></li>
+        <li data-t="3"><b>Цена</b><span>9 отзывов</span></li>
+      </ul>
+      <figcaption>Отзыв из примера, заведение вымышленное.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block" id="nahodki">
+  <div class="wrap">
+    <div class="block__head">
+      <h2>Что мы находим в реальных разборах</h2>
+      <p>Владельцы обычно смотрят только Яндекс. А гости выбирают и через другие площадки, где картина бывает совсем другой. Названия заведений убраны.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="finds">
+        <thead>
+          <tr><th scope="col">Заведение</th><th scope="col">Яндекс Карты</th><th scope="col">Другая площадка</th><th scope="col">Что выяснилось</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Столовая, Лазаревское</td>
+            <td class="num">4,1</td>
+            <td class="num num--bad">1,8 <small>2ГИС</small></td>
+            <td>За два года ни одного ответа на негативные отзывы. Главные жалобы: цены и обслуживание на раздаче.</td>
+          </tr>
+          <tr>
+            <td>Гостевой дом, Адлер</td>
+            <td class="num">4,1</td>
+            <td class="num num--bad">3,7 <small>2ГИС</small></td>
+            <td>Владелец не отвечает на отзывы с 2024 года. Гости пишут о шуме от депо и о том, что фото не совпадают с номерами.</td>
+          </tr>
+          <tr>
+            <td>Гостевой дом, Сириус</td>
+            <td class="num">4,4</td>
+            <td class="num num--bad">5,8 <small>из 10, «цена/качество» на Островке</small></td>
+            <td>На все жалобы один и тот же шаблонный ответ, иногда через несколько месяцев. В объявлении фото соседнего отеля.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="block block--tint">
+  <div class="wrap">
+    <div class="block__head">
+      <h2>Что будет в отчёте</h2>
+    </div>
+    <dl class="contents">
+      <div><dt>Оценки на всех площадках</dt><dd>Яндекс Карты, 2ГИС, Островок, 101hotels, Яндекс Путешествия, Tripadvisor. Где рейтинг ниже и сколько там отзывов.</dd></div>
+      <div><dt>Темы жалоб с цифрами</dt><dd>Сколько раз за период пишут про ожидание, цены, чистоту, персонал, шум. Видно, что болит сильнее всего.</dd></div>
+      <div><dt>Что гостям нравится</dt><dd>Сильные стороны, которые стоит показывать в описании и на фото.</dd></div>
+      <div><dt>Цитаты из отзывов</dt><dd>Несколько коротких фраз, чтобы было понятно, как это звучит у гостей.</dd></div>
+      <div><dt>Пять первых шагов</dt><dd>Что исправить в первую очередь именно у вас, а не общие советы.</dd></div>
+      <div><dt>Готовый ответ на отзыв</dt><dd>Образец ответа на самую частую жалобу, который можно взять за основу.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block" id="primer">
+  <div class="wrap primer">
+    <a href="primer-razbora.pdf" class="primer__img" target="_blank" rel="noopener" aria-label="Открыть пример отчёта в PDF">
+      <img src="img/primer.png" alt="Первая страница примера отчёта: таблица оценок по площадкам и темы жалоб" width="560" height="793" loading="lazy">
+    </a>
+    <div class="primer__text">
+      <h2>Пример отчёта</h2>
+      <p>Так выглядит готовый разбор. Заведение в примере вымышленное, но формат ровно тот, что вы получите: две страницы, которые можно прочитать за пять минут и передать управляющему.</p>
+      <p><a href="primer-razbora.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Открыть пример в PDF</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block block--tint" id="kak">
+  <div class="wrap">
+    <div class="block__head">
+      <h2>Как заказать</h2>
+    </div>
+    <ol class="steps">
+      <li><b>Оставьте заявку</b><span>Ссылка на заведение на Яндекс Картах или в 2ГИС и удобный способ связи.</span></li>
+      <li><b>Оплатите</b><span>Пришлём ссылку на оплату картой или через СБП. Чек приходит автоматически.</span></li>
+      <li><b>Получите отчёт</b><span>PDF на почту или в мессенджер в течение двух рабочих дней.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="ceny">
+  <div class="wrap">
+    <div class="block__head">
+      <h2>Цены</h2>
+      <p>Один разбор показывает картину сейчас. Повторные показывают, сработали ли изменения. Пакет действует 12 месяцев.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="prices">
+        <thead>
+          <tr><th scope="col">Тариф</th><th scope="col">Как часто</th><th scope="col">За один разбор</th><th scope="col">Стоимость</th><th scope="col"><span class="sr">Заказать</span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1 разбор</th><td>Один раз</td><td>690 ₽</td><td class="sum">690 ₽</td>
+            <td><a href="#zakaz" class="btn btn--ghost btn--sm" data-tariff="1 разбор — 690 ₽">Выбрать</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2 разбора</th><td>Раз в полгода</td><td>500 ₽</td><td class="sum">999 ₽</td>
+            <td><a href="#zakaz" class="btn btn--ghost btn--sm" data-tariff="2 разбора в год — 999 ₽">Выбрать</a></td>
+          </tr>
+          <tr class="is-main">
+            <th scope="row">4 разбора <span class="badge">чаще выбирают</span></th><td>Раз в квартал</td><td>448 ₽</td><td class="sum">1 790 ₽</td>
+            <td><a href="#zakaz" class="btn btn--sm" data-tariff="4 разбора в год — 1 790 ₽">Выбрать</a></td>
+          </tr>
+          <tr>
+            <th scope="row">6 разборов</th><td>Раз в два месяца</td><td>415 ₽</td><td class="sum">2 490 ₽</td>
+            <td><a href="#zakaz" class="btn btn--ghost btn--sm" data-tariff="6 разборов в год — 2 490 ₽">Выбрать</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="block block--tint" id="voprosy">
+  <div class="wrap">
+    <div class="block__head">
+      <h2>Вопросы</h2>
+    </div>
+    <dl class="faq">
+      <div><dt>Откуда вы берёте отзывы?</dt><dd>Только из открытых источников: Яндекс Карты, 2ГИС, Островок, 101hotels, Яндекс Путешествия, Tripadvisor и другие площадки, где есть ваше заведение. Доступ к вашим кабинетам не нужен.</dd></div>
+      <div><dt>Вы пишете отзывы или удаляете плохие?</dt><dd>Нет. Мы не пишем отзывы на заказ и не накручиваем рейтинг. Мы показываем, на что жалуются гости, и помогаем на это правильно ответить.</dd></div>
+      <div><dt>Что если отзывов мало?</dt><dd>Напишите до оплаты, мы посмотрим карточку. Если отзывов слишком мало для содержательного разбора, скажем об этом прямо и не возьмём деньги.</dd></div>
+      <div><dt>Можно вернуть деньги?</dt><dd>Да, если мы ещё не начали работу. По пакетам возвращаем стоимость неиспользованных разборов. Подробно в <a href="oferta.html">договоре-оферте</a>.</dd></div>
+      <div><dt>Будет ли чек?</dt><dd>Да. Чек формируется автоматически после оплаты и приходит на почту. Мы работаем официально, как самозанятые.</dd></div>
+      <div><dt>Можно заказать для нескольких заведений?</dt><dd>Да. Оставьте одну заявку и перечислите ссылки в комментарии, посчитаем стоимость.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block" id="zakaz">
+  <div class="wrap order">
+    <div class="order__text">
+      <h2>Заказать разбор</h2>
+      <p>Оставьте заявку. Мы посмотрим ваше заведение и в течение рабочего дня пришлём ссылку на оплату. Вопросы можно задать в комментарии, ответим до оплаты.</p>
+      <p>Почта для связи: <a href="mailto:info@otzivtop.ru">info@otzivtop.ru</a></p>
+    </div>
+    <form class="form" action="order.php" method="post">
+      <div class="form__row">
+        <label>Ваше имя
+          <input type="text" name="name" required maxlength="80" autocomplete="name">
+        </label>
+        <label>Телефон или почта
+          <input type="text" name="contact" required maxlength="120" autocomplete="email">
+        </label>
+      </div>
+      <label>Ссылка на заведение на Яндекс Картах или в 2ГИС
+        <input type="url" name="link" required maxlength="500" placeholder="https://yandex.ru/maps/org/...">
+      </label>
+      <label>Тариф
+        <select name="tariff" id="tariff">
+          <option>1 разбор — 690 ₽</option>
+          <option>2 разбора в год — 999 ₽</option>
+          <option selected>4 разбора в год — 1 790 ₽</option>
+          <option>6 разборов в год — 2 490 ₽</option>
+        </select>
+      </label>
+      <label>Комментарий, если нужно
+        <textarea name="comment" rows="3" maxlength="1000"></textarea>
+      </label>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="check">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен на обработку персональных данных по <a href="privacy.html" target="_blank">политике</a> и принимаю условия <a href="oferta.html" target="_blank">оферты</a></span>
+      </label>
+      <button type="submit" class="btn">Отправить заявку</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img src="img/logo.svg" alt="ОтзывТоп" width="135" height="36">
+    <nav class="foot__links" aria-label="Документы и контакты">
+      <a href="mailto:info@otzivtop.ru">info@otzivtop.ru</a>
+      <a href="oferta.html">Договор-оферта</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </nav>
+    <p class="foot__legal">Исполнитель: самозанятый [ФИО], ИНН [ИНН]</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-tariff]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var s = document.getElementById('tariff');
+    for (var i = 0; i < s.options.length; i++) {
+      if (s.options[i].text === b.dataset.tariff) s.selectedIndex = i;
+    }
+  });
+});
+// Подсветка связки «фраза ↔ тема» в отзыве
+document.querySelectorAll('.review [data-t]').forEach(function (el) {
+  ['mouseenter', 'focus'].forEach(function (ev) {
+    el.addEventListener(ev, function () {
+      document.querySelector('.review').setAttribute('data-active', el.dataset.t);
+    });
+  });
+  el.addEventListener('mouseleave', function () {
+    document.querySelector('.review').removeAttribute('data-active');
+  });
+});
+</script>
+</body>
+</html>
