@@ -12,5 +12,7 @@ RewriteRule ^(.*)$ http://otzivtop.ru/$1 [R=301,L]
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://otzivtop.ru/$1 [R=301,L]
 
-# Закрыть папку с заявками
+# Закрыть служебные папки
 RewriteRule ^zayavki/ - [F,L]
+RewriteRule (^|/)\.git - [F,L]
+RewriteRule ^\.envrc$ - [F,L]
