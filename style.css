@@ -133,6 +133,10 @@ thead th{font-size:14px;font-weight:500;color:var(--muted);padding-top:0;border-
 .faq dt{font-weight:600;color:var(--ink);font-size:18px;margin-bottom:6px}
 .faq dd{margin:0;color:var(--muted)}
 
+/* Кто мы */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
+.about__text p{color:var(--muted);font-size:18px;max-width:36em}
+
 /* Заказ */
 .order{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
 .order__text p{color:var(--muted)}
@@ -165,7 +169,7 @@ thead th{font-size:14px;font-weight:500;color:var(--muted);padding-top:0;border-
 @media (max-width:1000px){
   .nav{display:none}
   .top__in{justify-content:space-between}
-  .hero__in,.primer,.order{grid-template-columns:1fr;gap:48px}
+  .hero__in,.primer,.order,.about{grid-template-columns:1fr;gap:48px}
   .hero{padding:48px 0 64px}
   .primer__img{max-width:420px}
   .block{padding:64px 0}

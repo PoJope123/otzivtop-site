@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /spasibo.html
+Disallow: /zayavki/
+
+Sitemap: https://otzivtop.ru/sitemap.xml
