@@ -51,7 +51,7 @@ p{margin:0 0 14px}
 .hero__in{display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:center}
 .lead{font-size:19px;color:var(--muted);max-width:34em}
 .hero__btns{display:flex;flex-wrap:wrap;align-items:center;gap:28px;margin:30px 0 44px}
-.facts{display:flex;flex-wrap:wrap;gap:20px 44px;margin:0;padding-top:24px;border-top:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,max-content));gap:20px 36px;margin:0;padding-top:24px;border-top:1px solid var(--line)}
 .facts dt{font:800 22px/1.2 Montserrat,Arial,sans-serif;color:var(--ink)}
 .facts dd{margin:4px 0 0;font-size:14px;color:var(--muted)}
 
@@ -197,3 +197,4 @@ thead th{font-size:14px;font-weight:500;color:var(--muted);padding-top:0;border-
   .finds td.num:not(.num--bad)::before{content:"Яндекс Карты"}
   .finds td.num--bad::before{content:"Другая площадка"}
 }
+@media (max-width:600px){.facts{gap:16px 18px}.facts dt{font-size:19px}.facts dd{font-size:13px}}
