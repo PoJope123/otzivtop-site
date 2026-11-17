@@ -23,20 +23,24 @@ function field($name, $max) {
 
 $name    = field('name', 80);
 $contact = field('contact', 120);
+$place   = field('place', 150);
+$address = field('address', 200);
 $link    = field('link', 500);
 $tariff  = field('tariff', 60);
 $comment = field('comment', 1000);
 $agree   = !empty($_POST['agree']);
 
-if ($name === '' || $contact === '' || $link === '' || !$agree) {
+if ($name === '' || $contact === '' || ($place === '' && $link === '') || !$agree) {
     header('Location: /?error=1#zakaz');
     exit;
 }
 
-$subject = 'Новая заявка с сайта: ' . $tariff;
+$subject = 'Новая заявка: ' . ($place !== '' ? $place : 'заведение') . ' — ' . $tariff;
 $body = "Имя: $name\n"
       . "Контакт: $contact\n"
-      . "Заведение: $link\n"
+      . "Заведение: " . ($place !== '' ? $place : '—') . "\n"
+      . "Город или адрес: " . ($address !== '' ? $address : '—') . "\n"
+      . "Ссылка: " . ($link !== '' ? $link : '—') . "\n"
       . "Тариф: $tariff\n"
       . "Комментарий: " . ($comment !== '' ? $comment : '—') . "\n\n"
       . "Время: " . date('d.m.Y H:i') . "\n"

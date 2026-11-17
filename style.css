@@ -148,6 +148,11 @@ thead th{font-size:14px;font-weight:500;color:var(--muted);padding-top:0;border-
 .form .check{grid-template-columns:22px 1fr;align-items:start;font-weight:400;font-size:14px;color:var(--muted)}
 .form .check input{width:18px;height:18px;margin:3px 0 0;accent-color:var(--orange)}
 .form .btn{justify-self:start}
+.more summary{cursor:pointer;color:var(--orange-ink);font-size:15px;list-style:none;width:max-content}
+.more summary::-webkit-details-marker{display:none}
+.more summary:hover{text-decoration:underline}
+.more[open] summary{margin-bottom:12px}
+.more__field{display:grid}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 
 /* Подвал */
