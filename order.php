@@ -29,6 +29,7 @@ $link    = field('link', 500);
 $tariff  = field('tariff', 60);
 $comment = field('comment', 1000);
 $agree   = !empty($_POST['agree']);
+$news    = !empty($_POST['news']);
 
 if ($name === '' || $contact === '' || ($place === '' && $link === '') || !$agree) {
     header('Location: /?error=1#zakaz');
@@ -42,7 +43,8 @@ $body = "Имя: $name\n"
       . "Город или адрес: " . ($address !== '' ? $address : '—') . "\n"
       . "Ссылка: " . ($link !== '' ? $link : '—') . "\n"
       . "Тариф: $tariff\n"
-      . "Комментарий: " . ($comment !== '' ? $comment : '—') . "\n\n"
+      . "Комментарий: " . ($comment !== '' ? $comment : '—') . "\n"
+      . "Согласие на письма о новых разборах: " . ($news ? 'ДА' : 'нет') . "\n\n"
       . "Время: " . date('d.m.Y H:i') . "\n"
       . "IP: " . ($_SERVER['REMOTE_ADDR'] ?? '') . "\n";
 
