@@ -203,3 +203,20 @@ thead th{font-size:14px;font-weight:500;color:var(--muted);padding-top:0;border-
   .finds td.num--bad::before{content:"Другая площадка"}
 }
 @media (max-width:600px){.facts{gap:16px 18px}.facts dt{font-size:19px}.facts dd{font-size:13px}}
+/* Цены на телефоне: карточки вместо широкой таблицы */
+@media (max-width:640px){
+  .prices{min-width:0}
+  .prices thead{display:none}
+  .prices,.prices tbody{display:block}
+  .prices tr{display:grid;grid-template-columns:1fr auto;grid-template-areas:"name sum" "freq btn" "unit btn";column-gap:14px;row-gap:2px;padding:16px 16px;border-bottom:1px solid var(--line)}
+  .prices tr.is-main{background:#FFF4EC;box-shadow:inset 4px 0 0 var(--orange)}
+  .prices th,.prices td,.prices tr.is-main th,.prices tr.is-main td{display:block;padding:0;border:0;background:none;box-shadow:none;width:auto}
+  .prices th[scope=row]{grid-area:name;font-size:17px;width:auto}
+  .prices td:nth-of-type(1){grid-area:freq;font-size:14px;margin-top:4px}
+  .prices td:nth-of-type(2){grid-area:unit;font-size:14px}
+  .prices td:nth-of-type(2)::after{content:" за разбор"}
+  .prices .sum{grid-area:sum;font-size:21px;text-align:right}
+  .prices td:last-child,.prices tr.is-main td:last-child{grid-area:btn;align-self:end;text-align:right;padding:0}
+  .prices tbody th[scope=row],.prices tr.is-main th[scope=row]{padding:0}
+  .prices .badge{display:block;width:max-content;margin:6px 0 2px;padding:5px 9px;border-radius:20px}
+}
