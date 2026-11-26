@@ -1,4 +1,5 @@
 AddDefaultCharset UTF-8
+AddCharset UTF-8 .js .css
 ErrorDocument 404 /404.html
 Options -Indexes
 
