@@ -10,6 +10,7 @@ ym(114697430, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tr
     if (!a) return;
     var h = a.getAttribute("href") || "";
     if (h.indexOf("primer-razbora") > -1) goal("open_sample");
+    else if (h.indexOf("razbor.pdf") > -1) goal("report_download");
     else if (h.indexOf("mailto:") === 0) goal("email_click");
     else if (a.dataset && a.dataset.tariff) goal("tariff_select", {tariff: a.dataset.tariff});
     else if (h === "#zakaz") goal("cta_order");
@@ -30,6 +31,7 @@ ym(114697430, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tr
   });
 
   if (/spasibo/.test(location.pathname)) goal("order_sent");
+  if (/^\/r\//.test(location.pathname)) goal("report_page");
 
   var ok = false;
   try { ok = localStorage.getItem("cookie_ok") === "1"; } catch (e) {}

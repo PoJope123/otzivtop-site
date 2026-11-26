@@ -225,3 +225,30 @@ thead th{font-size:14px;font-weight:500;color:var(--muted);padding-top:0;border-
 .cookie p{margin:0;flex:1;color:var(--ink)}
 .cookie a{color:var(--orange-ink)}
 @media (max-width:600px){.cookie{flex-direction:column;align-items:stretch;gap:10px}}
+/* Личная страница разбора */
+.rp-top{border-bottom:1px solid var(--line)}
+.rp-top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.rp-meta{font-size:14px;color:var(--muted)}
+.rp{max-width:820px;padding-top:36px;padding-bottom:56px}
+.rp-kicker{color:var(--orange-ink);font-weight:600;margin:0 0 8px}
+.rp h1{font-size:clamp(30px,5vw,44px);margin-bottom:6px}
+.rp-addr{color:var(--muted);margin:0 0 22px}
+.rp h2{font-size:22px;margin:36px 0 12px}
+.rp-cta{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+.rp-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0 4px}
+.rp-keys div{background:#FFF8F0;border-radius:10px;padding:14px 16px}
+.rp-keys b{display:block;font:800 26px/1.1 Montserrat,Arial,sans-serif;color:var(--orange)}
+.rp-keys span{font-size:14px;color:var(--ink)}
+.rp-tab{width:100%;border-collapse:collapse;font-size:15px}
+.rp-tab th,.rp-tab td{text-align:left;padding:10px 10px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.rp-tab thead th{font-size:13px;color:var(--muted);font-weight:500;border-bottom:1.5px solid var(--ink)}
+.rp-tab td:nth-child(2){font:700 17px/1.2 Montserrat,Arial,sans-serif;white-space:nowrap}
+.rp-tab td.low{color:var(--orange-ink)}
+.rp-probs{padding-left:20px;margin:0}
+.rp-probs li{margin-bottom:10px}
+.rp-probs span{color:var(--muted)}
+.rp-more{color:var(--muted)}
+.rp-note{background:#FFF8F0;border-radius:10px;padding:16px 18px;margin-top:28px}
+.rp-note p{margin:0 0 8px}.rp-note p:last-child{margin:0}
+.rp-private{font-size:13px;color:var(--muted);margin-top:18px}
+@media (max-width:600px){.rp-keys{grid-template-columns:1fr}.rp-cta .btn{width:100%}}
