@@ -6,28 +6,174 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Разбор отзывов — Автосервис «Бумер Сервис» · ОтзывТоп</title>
 <link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" href="/fonts/montserrat-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=5">
+<style>
+body.rv{margin:0;background:#FBF8F4;color:#3B3029;font:400 17px/1.6 "Golos Text",Arial,sans-serif}
+.rv *{box-sizing:border-box}
+.rv a{color:inherit}
+.rv h1,.rv h2,.rv h3{font-family:Montserrat,Arial,sans-serif;color:#2B1D12;margin:0;letter-spacing:-.01em}
+.rv .in{max-width:1120px;margin:0 auto;padding:0 28px}
+.rv-bar{background:#fff;border-bottom:1px solid #EDE6DF;position:sticky;top:0;z-index:5}
+.rv-bar .in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.rv-bar img{height:34px;display:block}
+.rv-bar span{font-size:14px;color:#6F655E}
+.rv-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#E8590C;color:#fff!important;text-decoration:none;font:700 16px/1 Montserrat,Arial,sans-serif;padding:16px 24px;border-radius:12px;transition:background .15s}
+.rv-btn:hover{background:#C94B08}
+.rv-btn:focus-visible,.rv-ghost:focus-visible{outline:3px solid #2B1D12;outline-offset:3px}
+.rv-ghost{display:inline-flex;align-items:center;justify-content:center;border:1.5px solid #2B1D12;color:#2B1D12;text-decoration:none;font:700 16px/1 Montserrat,Arial,sans-serif;padding:15px 22px;border-radius:12px}
+.rv-ghost:hover{background:#2B1D12;color:#fff}
+.rv-bar .rv-btn{padding:11px 16px;font-size:14px;border-radius:10px}
+
+.rv-hero{background:linear-gradient(180deg,#FFF3E6 0%,#FBF8F4 100%);padding:56px 0 64px}
+.rv-hero .in{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.rv-kick{display:inline-block;background:#fff;border:1px solid #F3D9C4;color:#B8470A;font-weight:600;font-size:14px;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+.rv-hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.05;font-weight:800}
+.rv-addr{color:#6F655E;margin:12px 0 22px;font-size:16px}
+.rv-lead{font-size:20px;line-height:1.5;color:#2B1D12;margin:0 0 28px;max-width:34em}
+.rv-lead mark{background:#FFE07A;padding:0 3px;border-radius:3px}
+.rv-acts{display:flex;flex-wrap:wrap;gap:12px}
+.rv-stack{position:relative;height:440px}
+.rv-stack a{position:absolute;display:block;width:300px;border-radius:8px;overflow:hidden;box-shadow:0 18px 40px -12px rgba(43,29,18,.35);background:#fff;transition:transform .2s}
+.rv-stack img{display:block;width:100%;height:auto}
+.rv-stack a:nth-child(1){left:6%;top:30px;transform:rotate(-5deg)}
+.rv-stack a:nth-child(2){left:30%;top:0;transform:rotate(3deg)}
+.rv-stack a:hover{transform:rotate(0) scale(1.02);z-index:3}
+
+.rv-sec{padding:64px 0}
+.rv-sec h2{font-size:clamp(26px,3vw,34px);font-weight:800;margin-bottom:8px}
+.rv-sub{color:#6F655E;margin:0 0 28px;max-width:46em}
+.rv-white{background:#fff;border-top:1px solid #EDE6DF;border-bottom:1px solid #EDE6DF}
+
+.rv-plats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rv-plat{background:#FBF8F4;border-radius:14px;padding:18px 18px 16px;border:1px solid #EDE6DF;display:flex;flex-direction:column;gap:6px;min-height:170px}
+.rv-plat .nm{font-weight:600;color:#2B1D12;font-size:15px}
+.rv-plat .sc{font:800 40px/1 Montserrat,Arial,sans-serif;color:#2B1D12}
+.rv-plat .ct{font-size:13px;color:#6F655E}
+.rv-plat .is{font-size:14px;line-height:1.4;margin-top:auto;padding-top:8px;border-top:1px dashed #E0D6CC}
+.rv-plat.ok .sc{color:#2F7D3B}
+.rv-plat.bad{background:#FFF1E8;border-color:#F6CFB4}
+.rv-plat.low .sc{color:#B8470A}
+.rv-plat.none .sc{color:#C9BDB2}
+
+.rv-two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+.rv-sum p{margin:0 0 16px;font-size:18px}
+.rv-gb{display:grid;gap:14px}
+.rv-gb div{border-radius:14px;padding:18px 20px}
+.rv-gb .g{background:#EEF6EE}.rv-gb .b{background:#FFF1E8}
+.rv-gb h3{font-size:16px;margin-bottom:8px}
+.rv-gb ul{margin:0;padding-left:20px}.rv-gb li{margin:4px 0}
+
+.rv-probs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv-prob{background:#fff;border:1px solid #EDE6DF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.rv-prob .n{font:800 48px/1 Montserrat,Arial,sans-serif;color:#E8590C}
+.rv-prob .sh{font-size:14px;color:#6F655E;margin-top:-6px}
+.rv-prob h3{font-size:19px;line-height:1.25}
+.rv-prob blockquote{margin:6px 0 0;padding:12px 14px;background:#FFF8E0;border-left:3px solid #F2C230;border-radius:0 8px 8px 0;font-size:15px;line-height:1.45}
+.rv-prob cite{display:block;font-style:normal;font-size:12px;color:#8A7E74;margin-top:6px}
+.rv-lock{margin-top:auto;font-size:14px;color:#B8470A;font-weight:600}
+
+.rv-bars{display:grid;gap:12px;max-width:760px}
+.rv-bar-row{display:grid;grid-template-columns:240px 1fr 56px;gap:14px;align-items:center;font-size:15px}
+.rv-track{height:12px;background:#EFE8E1;border-radius:99px;overflow:hidden}
+.rv-track i{display:block;height:100%;background:#E8590C;border-radius:99px}
+.rv-bar-row b{font-family:Montserrat,Arial,sans-serif;text-align:right}
+.rv-note-s{font-size:14px;color:#6F655E;margin-top:16px}
+
+.rv-pages{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:16px;margin:8px 0 28px}
+.rv-pages a{display:block;border-radius:8px;overflow:hidden;border:1px solid #E4DFDA;background:#fff;box-shadow:0 6px 16px -10px rgba(43,29,18,.3);transition:transform .15s}
+.rv-pages a:hover{transform:translateY(-3px)}
+.rv-pages img{display:block;width:100%;height:auto}
+
+.rv-final{background:#2B1D12;color:#F3EBE3;border-radius:22px;padding:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.rv-final h2{color:#fff;font-size:28px;margin-bottom:12px}
+.rv-final p{margin:0 0 10px;color:#E3D8CE}
+.rv-final .rv-ghost{border-color:#fff;color:#fff}.rv-final .rv-ghost:hover{background:#fff;color:#2B1D12}
+.rv-contact{display:grid;gap:10px;font-size:16px}
+.rv-contact a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.rv-foot{text-align:center;font-size:13px;color:#8A7E74;padding:28px 0 40px}
+
+@media (max-width:900px){
+ .rv-hero .in,.rv-two,.rv-final{grid-template-columns:1fr}
+ .rv-stack{height:340px;max-width:420px}
+ .rv-stack a{width:220px}
+ .rv-plats{grid-template-columns:repeat(2,1fr)}
+ .rv-probs{grid-template-columns:1fr}
+ .rv-pages{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:560px){
+ .rv .in{padding:0 18px}
+ .rv-bar span{display:none}
+ .rv-hero{padding:36px 0 40px}
+ .rv-lead{font-size:18px}
+ .rv-acts a{width:100%}
+ .rv-plats{grid-template-columns:1fr}
+ .rv-plat{min-height:0}
+ .rv-pages{grid-template-columns:repeat(3,1fr)}
+ .rv-bar-row{grid-template-columns:1fr 48px}.rv-track{grid-column:1/-1;order:3}
+ .rv-final{padding:28px 22px}
+ .rv-sec{padding:44px 0}
+}
+@media (prefers-reduced-motion:reduce){.rv *{transition:none!important}}
+</style>
 </head>
-<body class="rpage">
-<header class="rp-top"><div class="wrap"><a href="/" class="logo" aria-label="ОтзывТоп — на главную"><img src="/img/logo.svg" alt="ОтзывТоп" height="34"></a><span class="rp-meta">Разбор отзывов · ноябрь 2026</span></div></header>
-<main class="wrap rp">
-  <p class="rp-kicker">Подготовлено для вас бесплатно</p>
+<body class="rv">
+<header class="rv-bar"><div class="in"><a href="/" aria-label="ОтзывТоп — на главную"><img src="/img/logo.svg" alt="ОтзывТоп"></a><span>Разбор отзывов · ноябрь 2026</span><a class="rv-btn" href="razbor.pdf" target="_blank" rel="noopener">Скачать PDF</a></div></header>
+<main>
+<section class="rv-hero"><div class="in">
+ <div>
+  <span class="rv-kick">Разбор сделан для вас бесплатно</span>
   <h1>Автосервис «Бумер Сервис»</h1>
-  <p class="rp-addr">Адлер, Авиационная улица, 23</p>
-  <div class="rp-cta"><a class="btn" href="razbor.pdf" target="_blank" rel="noopener">Открыть полный разбор (PDF, 6 стр.)</a></div>
-  <div class="rp-keys"><div><b>4,2</b><span>в 2ГИС и в Google — на 0,7 ниже, чем на Яндексе</span></div><div><b>30%</b><span>отрицательных отзывов про шиномонтаж</span></div><div><b>2026</b><span>награда Яндекса «Хорошее место»</span></div></div>
-  <h2>Главное</h2>
-  <p>«Бумер» на Яндексе — один из самых сильных сервисов Адлера: 4,9, 610 оценок и награда «Хорошее место 2026». Хвалят специалистов по немецким машинам, чистоту, зону ожидания с кофе и то, что принимают срочно, даже ночью с эвакуатора.</p><p>В 2ГИС и в Google картина другая: 4,2 на обеих. Разрыв в 0,7 — очень большой. Водитель, который ищет СТО не через Яндекс, видит средний сервис с жалобами на цены и связь.</p><p>Жалобы трёх типов: не дозвониться и не записаться, итоговый счёт выше ожиданий, и мелкие работы — развал, шиномонтаж, замена масла — с ошибками.</p>
-  <h2>Оценки на площадках</h2>
-  <div class="table-wrap"><table class="rp-tab"><thead><tr><th scope="col">Площадка</th><th scope="col">Оценка</th><th scope="col">Что не так</th></tr></thead><tbody><tr><th scope='row'>Яндекс Карты</th><td class=''>4,9</td><td>Отлично, награда «Хорошее место 2026»</td></tr><tr><th scope='row'>2ГИС</th><td class='low'>4,2</td><td>Ниже Яндекса на 0,7</td></tr><tr><th scope='row'>Google Карты</th><td class='low'>4,2</td><td>Ниже Яндекса на 0,7, жалобы на связь и рост цены по ходу ремонта</td></tr><tr><th scope='row'>Zoon</th><td class='low'>4,4</td><td>Карточка в разделе «магазины», а не «автосервисы»</td></tr><tr><th scope='row'>Яндекс Исполнители</th><td class=''>—</td><td>Профиль есть, рейтинга нет</td></tr><tr><th scope='row'>Авито</th><td class=''>—</td><td>Профиль есть, проверить не удалось: сайт запросил проверку</td></tr></tbody></table></div>
-  <h2>Три главные проблемы</h2>
-  <ol class="rp-probs"><li><b>Итоговый счёт</b> <span>4,2 — в 2ГИС и Google против 4,9 на Яндексе</span></li><li><b>Не дозвониться и не записаться</b> <span>3 — отзыва про запись и связь на трёх площадках</span></li><li><b>Мелкие работы с ошибками</b> <span>5 — отзывов про развал, шиномонтаж и масло</span></li></ol>
-  <p class="rp-more">Цитаты гостей, что сделать с каждой проблемой, готовые ответы на отзывы и план на три месяца — в полном разборе.</p>
-  <div class="rp-cta"><a class="btn" href="razbor.pdf" target="_blank" rel="noopener">Открыть полный разбор</a><a class="btn btn--ghost" href="mailto:info@otzivtop.ru?subject=Разбор отзывов — Бумер Сервис">Обсудить разбор</a></div>
-  <div class="rp-note"><p><b>Вы попали в первые 50 заведений, которым мы делаем разбор бесплатно.</b> Нам важно понять, насколько он полезен: что пригодилось, чего не хватило, с чем вы не согласны. Будем благодарны за пару слов в ответ.</p>
-  <p>Вадим, ОтзывТоп · <a href="tel:+79127885893">+7 912 788-58-93</a> · Telegram <a href="https://t.me/MazeinWW">@MazeinWW</a> · <a href="mailto:info@otzivtop.ru">info@otzivtop.ru</a></p></div>
-  <p class="rp-private">Эта страница открывается только по ссылке и не видна в поиске.</p>
+  <p class="rv-addr">Адлер, Авиационная улица, 23 · отзывы за 2021 — ноябрь 2026</p>
+  <p class="rv-lead">На Яндексе у «Бумера» 4,9, а в 2ГИС и Google — 4,2. Разрыв 0,7, и почти все жалобы там про связь и итоговый счёт.</p>
+  <div class="rv-acts"><a class="rv-btn" href="razbor.pdf" target="_blank" rel="noopener">Открыть полный разбор · 6 стр.</a><a class="rv-ghost" href="#plats">Смотреть кратко</a></div>
+ </div>
+ <div class="rv-stack"><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Открыть разбор, страница 1'><img src='p-2.jpg' alt='' width='300' height='424'></a><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Открыть разбор, страница 2'><img src='p-1.jpg' alt='' width='300' height='424'></a></div>
+</div></section>
+
+<section class="rv-sec rv-white" id="plats"><div class="in">
+ <h2>Оценки на всех площадках</h2>
+ <p class="rv-sub">Проверили 6 площадок, где гости ищут и оценивают вас. Оранжевым отмечено то, что стоит поправить.</p>
+ <div class="rv-plats"><div class='rv-plat ok'><span class='nm'>Яндекс Карты</span><span class='sc'>4,9</span><span class='ct'>297 отзывов</span><span class='is'>Отлично, награда «Хорошее место 2026»</span></div><div class='rv-plat low bad'><span class='nm'>2ГИС</span><span class='sc'>4,2</span><span class='ct'>68 отзывов</span><span class='is'>Ниже Яндекса на 0,7</span></div><div class='rv-plat low bad'><span class='nm'>Google Карты</span><span class='sc'>4,2</span><span class='ct'>91 отзыв</span><span class='is'>Ниже Яндекса на 0,7, жалобы на связь и рост цены по ходу ремонта</span></div><div class='rv-plat low bad'><span class='nm'>Zoon</span><span class='sc'>4,4</span><span class='ct'>52 оценки, 4 отзыва</span><span class='is'>Карточка в разделе «магазины», а не «автосервисы»</span></div><div class='rv-plat none bad'><span class='nm'>Яндекс Исполнители</span><span class='sc'>—</span><span class='ct'>нет данных</span><span class='is'>Профиль есть, рейтинга нет</span></div><div class='rv-plat none bad'><span class='nm'>Авито</span><span class='sc'>—</span><span class='ct'>нет данных</span><span class='is'>Профиль есть, проверить не удалось: сайт запросил проверку</span></div></div>
+</div></section>
+
+<section class="rv-sec"><div class="in rv-two">
+ <div class="rv-sum"><h2>Главное за минуту</h2><p class="rv-sub" style="margin-bottom:20px">Прочитали 115 отзывов.</p><p>«Бумер» на Яндексе — один из самых сильных сервисов Адлера: 4,9, 610 оценок и награда «Хорошее место 2026». Хвалят специалистов по немецким машинам, чистоту, зону ожидания с кофе и то, что принимают срочно, даже ночью с эвакуатора.</p><p>В 2ГИС и в Google картина другая: 4,2 на обеих. Разрыв в 0,7 — очень большой. Водитель, который ищет СТО не через Яндекс, видит средний сервис с жалобами на цены и связь.</p><p>Жалобы трёх типов: не дозвониться и не записаться, итоговый счёт выше ожиданий, и мелкие работы — развал, шиномонтаж, замена масла — с ошибками.</p></div>
+ <div class="rv-gb"><div class="g"><h3>Что работает</h3><ul><li>Специалисты по немецким маркам</li><li>Чистый ангар и зона ожидания с кофе</li><li>Срочный приём, даже ночью</li><li>Запчасти в наличии</li></ul></div><div class="b"><h3>Что мешает</h3><ul><li>2ГИС и Google 4,2 — ниже на 0,7</li><li>Не дозвониться и не записаться</li><li>Счёт выше ожиданий, «раздувают проблему»</li><li>Развал и шиномонтаж с ошибками</li></ul></div></div>
+</div></section>
+
+<section class="rv-sec rv-white"><div class="in">
+ <h2>Три главные проблемы</h2>
+ <p class="rv-sub">По каждой в разборе — почему она бьёт по рейтингу, что сделать и готовый ответ на отзыв.</p>
+ <div class="rv-probs"><article class='rv-prob'><span class='n'>4,2</span><span class='sh'>в 2ГИС и Google против 4,9 на Яндексе</span><h3>Итоговый счёт</h3><blockquote>стоимость изначально сказали 30 тысяч, через час позвонили сказали уже 42<cite>Google</cite></blockquote><span class='rv-lock'>Что сделать и готовый ответ — в разборе</span></article><article class='rv-prob'><span class='n'>3</span><span class='sh'>отзыва про запись и связь на трёх площадках</span><h3>Не дозвониться и не записаться</h3><blockquote>Невозможно записаться на сервис. Звонишь / пишешь и полный игнор.<cite>Яндекс, май 2025</cite></blockquote><span class='rv-lock'>Что сделать и готовый ответ — в разборе</span></article><article class='rv-prob'><span class='n'>5</span><span class='sh'>отзывов про развал, шиномонтаж и масло</span><h3>Мелкие работы с ошибками</h3><blockquote>делали развал через месяц резина на мусор<cite>2ГИС</cite></blockquote><span class='rv-lock'>Что сделать и готовый ответ — в разборе</span></article></div>
+</div></section>
+
+<section class="rv-sec"><div class="in">
+ <h2>Доля положительных отзывов по темам</h2>
+ <p class="rv-sub">По разметке Яндекс Карт на 26 ноября 2026. Отдельно: у шиномонтажа 30% отрицательных отзывов — это самая слабая тема сервиса.</p>
+ <div class="rv-bars"><div class='rv-bar-row'><span>Запчасти, 41 отзыв</span><div class='rv-track'><i style='width:71%'></i></div><b>71%</b></div><div class='rv-bar-row'><span>Диагностика, 53 отзыва</span><div class='rv-track'><i style='width:74%'></i></div><b>74%</b></div><div class='rv-bar-row'><span>Ремонт, 116 отзывов</span><div class='rv-track'><i style='width:79%'></i></div><b>79%</b></div><div class='rv-bar-row'><span>Персонал, 205 отзывов</span><div class='rv-track'><i style='width:82%'></i></div><b>82%</b></div><div class='rv-bar-row'><span>Время ожидания, 94 отзыва</span><div class='rv-track'><i style='width:85%'></i></div><b>85%</b></div></div>
+</div></section>
+
+<section class="rv-sec rv-white"><div class="in">
+ <h2>Что внутри полного разбора</h2>
+ <p class="rv-sub">Цитаты гостей, план на неделю, месяц и три месяца, готовые ответы на отзывы и цифры, по которым видно результат.</p>
+ <div class="rv-pages"><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Страница 1'><img src='p-1.jpg' alt='Страница 1 разбора' loading='lazy' width='140' height='198'></a><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Страница 2'><img src='p-2.jpg' alt='Страница 2 разбора' loading='lazy' width='140' height='198'></a><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Страница 3'><img src='p-3.jpg' alt='Страница 3 разбора' loading='lazy' width='140' height='198'></a><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Страница 4'><img src='p-4.jpg' alt='Страница 4 разбора' loading='lazy' width='140' height='198'></a><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Страница 5'><img src='p-5.jpg' alt='Страница 5 разбора' loading='lazy' width='140' height='198'></a><a href='razbor.pdf' target='_blank' rel='noopener' aria-label='Страница 6'><img src='p-6.jpg' alt='Страница 6 разбора' loading='lazy' width='140' height='198'></a></div>
+ <a class="rv-btn" href="razbor.pdf" target="_blank" rel="noopener">Открыть полный разбор · 6 стр.</a>
+</div></section>
+
+<section class="rv-sec"><div class="in">
+ <div class="rv-final">
+  <div><h2>Вы в числе первых 50 заведений</h2>
+   <p>Им мы делаем разбор бесплатно. Нам важно понять, насколько он полезен: что пригодилось, чего не хватило, с чем вы не согласны.</p>
+   <p>Будем благодарны за пару слов в ответ.</p></div>
+  <div class="rv-contact"><b style="color:#fff">Вадим, ОтзывТоп</b>
+   <a href="tel:+79127885893">+7 912 788-58-93</a>
+   <a href="https://t.me/MazeinWW">Telegram @MazeinWW</a>
+   <a href="mailto:info@otzivtop.ru?subject=Разбор отзывов — Бумер Сервис">info@otzivtop.ru</a></div>
+ </div>
+</div></section>
 </main>
+<p class="rv-foot">Страница открывается только по ссылке и не видна в поиске. Данные из открытых отзывов, ноябрь 2026.</p>
 <script src="/metrika.js" defer></script>
 </body>
 </html>
